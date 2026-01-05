@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, inject, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import {
   IonButton,
@@ -12,7 +12,10 @@ import {
   IonToolbar,
   IonLabel,
   IonPopover,
+  ModalController,
+  IonRouterOutlet,
 } from '@ionic/angular/standalone';
+import { ModalComponent } from './modal.component';
 
 @Component({
   selector: 'app-tab1',
@@ -34,7 +37,18 @@ import {
   ],
 })
 export class Tab1Page {
+  modalController = inject(ModalController);
+  private ionRouterOutlet = inject(IonRouterOutlet);
+
   @ViewChild(IonModal) modal!: IonModal;
+
+  async openModal() {
+    const modal = await this.modalController.create({
+      component: ModalComponent,
+      presentingElement: this.ionRouterOutlet.parentOutlet?.nativeEl,
+    });
+    return await modal.present();
+  }
 
   cancel() {
     this.modal.dismiss(null, 'cancel');
