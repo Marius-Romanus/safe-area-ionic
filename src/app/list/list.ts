@@ -1,0 +1,33 @@
+import { Component, inject } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+
+import {
+  IonButton,
+  IonButtons,
+  IonContent,
+  IonHeader,
+  IonItem,
+  IonTitle,
+  IonToolbar,
+  IonLabel,
+  IonList,
+  IonPopover,
+  IonIcon,
+  IonItemGroup,
+  IonItemDivider,
+} from '@ionic/angular/standalone';
+
+@Component({
+  selector: 'app-list',
+  templateUrl: 'list.html',
+  imports: [
+    FormsModule,
+    IonContent,
+    IonItem,
+    IonLabel,
+    IonList,
+    IonItemGroup,
+    IonItemDivider,
+  ],
+})
+export class List {}

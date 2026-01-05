@@ -16,6 +16,7 @@ import {
   IonRouterOutlet,
 } from '@ionic/angular/standalone';
 import { ModalComponent } from './modal.component';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-tab1',
@@ -34,6 +35,7 @@ import { ModalComponent } from './modal.component';
     IonList,
     IonLabel,
     IonPopover,
+    RouterLink,
   ],
 })
 export class Tab1Page {
