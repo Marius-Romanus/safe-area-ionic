@@ -16,6 +16,7 @@ import {
   IonItemGroup,
   IonItemDivider,
 } from '@ionic/angular/standalone';
+import { HeaderComponent } from './header';
 
 @Component({
   selector: 'app-list',
@@ -28,6 +29,7 @@ import {
     IonList,
     IonItemGroup,
     IonItemDivider,
+    HeaderComponent,
   ],
 })
 export class List {}
