@@ -7,6 +7,7 @@ import {
   PopoverController,
   IonLabel,
   IonList,
+  IonInput,
 } from '@ionic/angular/standalone';
 import { PopoverComponent } from './popover.component';
 import { HeaderModalComponent } from './header';
@@ -20,11 +21,19 @@ import { HeaderModalComponent } from './header';
     IonItem,
     IonLabel,
     IonList,
+    IonInput,
     HeaderModalComponent,
   ],
 })
 export class ModalComponent {
   popoverController = inject(PopoverController);
+  items = [];
+
+  ionViewWillEnter() {
+    setTimeout(() => {
+      this.items = new Array(20) as any;
+    }, 500);
+  }
 
   async presentPopover(e: Event) {
     const popover = await this.popoverController.create({

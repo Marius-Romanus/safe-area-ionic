@@ -1,15 +1,33 @@
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent } from '@ionic/angular/standalone';
-import { ExploreContainerComponent } from '../explore-container/explore-container.component';
+import {
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonContent,
+  IonCard,
+  IonFab,
+  IonFabButton,
+  IonIcon,
+} from '@ionic/angular/standalone';
+import { Headertab2Component } from './header';
 
 @Component({
   selector: 'app-tab2',
   templateUrl: 'tab2.page.html',
   styleUrls: ['tab2.page.scss'],
-  imports: [IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent]
+  imports: [
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonContent,
+    IonCard,
+    IonFab,
+    IonFabButton,
+    IonIcon,
+    Headertab2Component,
+  ],
 })
 export class Tab2Page {
-
+  searchView: boolean = false;
   constructor() {}
-
 }
