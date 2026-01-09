@@ -14,6 +14,11 @@ import {
   IonPopover,
   ModalController,
   IonRouterOutlet,
+  IonGrid,
+  IonRow,
+  IonCol,
+  IonCard,
+  IonIcon,
 } from '@ionic/angular/standalone';
 import { ModalComponent } from './modal.component';
 import { RouterLink } from '@angular/router';
@@ -36,6 +41,11 @@ import { RouterLink } from '@angular/router';
     IonLabel,
     IonPopover,
     RouterLink,
+    IonGrid,
+    IonRow,
+    IonCol,
+    IonCard,
+    IonIcon,
   ],
 })
 export class Tab1Page {

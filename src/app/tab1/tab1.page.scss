@@ -1,0 +1,13 @@
+ion-card {
+    height: 200px;
+    width: 200px;
+    border-radius: 8px;
+    border: 1px solid #000;
+    background-color: rebeccapurple;
+}
+
+.col-card {
+    transition-property: left, right, top, bottom;
+    transition-timing-function: ease-in-out;
+    transition-duration: 250ms;
+}
